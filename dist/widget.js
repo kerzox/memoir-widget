@@ -1,3 +1,3 @@
-(()=>{var n=(o,t)=>()=>(t||o((t={exports:{}}).exports,t),t.exports);var r=n(()=>{(()=>{let t=document.currentScript?.dataset.projectId||"unknown",e=document.createElement("div");e.innerText=`\u{1F4CC} Memoir Active
-Project: ${t}`,e.style.position="fixed",e.style.bottom="10px",e.style.right="10px",e.style.zIndex=9999,e.style.background="#111",e.style.color="#fff",e.style.padding="8px 12px",e.style.fontSize="12px",e.style.borderRadius="6px",e.style.boxShadow="0 2px 8px rgba(0,0,0,0.2)",e.style.whiteSpace="pre-line",e.style.fontFamily="monospace",e.style.cursor="default",document.body.appendChild(e),console.log(`[Memoir] Widget running for project: ${t}`)})()});r();})();
+(()=>{var r=(n,o)=>()=>(o||n((o={exports:{}}).exports,o),o.exports);var a=r(()=>{(()=>{let n=async t=>{let e=fetch(`http://localhost:5080/projects/${t}`,{method:"GET",headers:{"Content-Type":"application/json"}});if(!e.ok)throw new Error("Failed to load config");return await e.json()},c=document.currentScript?.dataset.projectId||"unknown";n(c).then(t=>{t&&console.log(`Loaded memoir and found a valid connection
+Welcome to ${t.apiUrl}`)})})()});a();})();
 //# sourceMappingURL=widget.js.map
